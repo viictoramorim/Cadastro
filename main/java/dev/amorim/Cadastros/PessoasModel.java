@@ -1,9 +1,13 @@
 package dev.amorim.Cadastros;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "cadastro")
 public class PessoasModel {
     
     @Id
@@ -18,7 +22,7 @@ public class PessoasModel {
     public PessoasModel(){
     }
 
-    public PessoasModel(String nome, String email, int years){
+    public PessoasModel(String name, String email, int years){
         this.name = name;
         this.email = email;
         this.years = years;
